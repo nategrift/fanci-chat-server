@@ -4,7 +4,7 @@
   "description": "Browser Homepage Application",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "start-server": "node app.js"
   },
   "repository": {
