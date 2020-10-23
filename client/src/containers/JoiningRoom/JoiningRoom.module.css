@@ -1,0 +1,60 @@
+@keyframes animateIn {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+.JoiningRoom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 600;
+    background-color: var(--color-background);
+    animation: animateIn 0.7s ease none 1 normal;
+    width: 30%;
+    min-width: 30rem;
+    max-width: 45rem;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.JoiningRoom h2{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-text-dull)
+}
+
+.JoiningRoom h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.JoiningRoom label, input {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.JoiningRoom input {
+    margin-left: 2rem;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: 0;
+    outline: 0;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    margin-top: 1rem;
+}
+
+.JoiningRoom div:last-of-type * {
+    margin: 2rem 3rem;
+}
