@@ -1,0 +1,95 @@
+.About {
+    color: var(--color-text);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--background);
+    
+}
+
+.section {
+    width: 50%;
+    height: 100vh;
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+}
+
+.section:first-child {
+    margin-right: 1px;
+}
+
+.section a {
+    text-decoration: none;
+    color: var(--color-accent);
+}
+
+.section img {
+    max-width: 25rem;
+}
+
+.section img:first-of-type {
+    max-width: 25rem;
+}
+
+.section p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.section:last-of-type p {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-text-dull);
+    max-width: 400px;
+}
+
+
+
+.section h1 {
+    width: 50%;
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+.info {
+    width: 50%;
+}
+
+.info  * {
+    margin: 3rem auto;
+    text-align: left;
+    color: var(--color-text-dull)
+}
+
+.info :first-child {
+    font-weight: 900;
+}
+
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 20%;
+    min-width: 200px;
+    font-size: 2.4rem;
+    color: var(--color-accent);
+
+}
+
+.About > a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--color-invert-button);
+}
