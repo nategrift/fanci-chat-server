@@ -355,7 +355,7 @@ module.exports.connectionEstablished = (socket) => {
             socket.to(user.room.roomID).emit("updateRooms", rooms);
             socket.emit("updateRooms", rooms);
 
-            socket.leave(user.room);
+            socket.leave(user.room.roomID);
             user.room = null;
             socket.emit("leftRoom", null);
         }
