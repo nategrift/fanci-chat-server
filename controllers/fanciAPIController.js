@@ -105,14 +105,14 @@ module.exports.connectionEstablished = (socket) => {
                     socket.emit('successfulJoinPrivateRoom')
                     joinedRoom(room);
                     sendStatus(
-                        `Joined ${room.name}`,
+                        `Joined ${room.roomName}`,
                         "Joined Private Room",
                         "SUCCESS"
                     );
 
                 } else {
                     sendStatus(
-                        `Error joining ${room.name}`,
+                        `Error joining ${room.roomName}`,
                         "Incorrect Password",
                         "ERROR"
                     );
