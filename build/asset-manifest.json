@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c450c12c.chunk.css",
+    "main.js": "/static/js/main.142a0595.chunk.js",
+    "main.js.map": "/static/js/main.142a0595.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8cca2583.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8cca2583.js.map",
+    "static/js/2.cfd5629a.chunk.js": "/static/js/2.cfd5629a.chunk.js",
+    "static/js/2.cfd5629a.chunk.js.map": "/static/js/2.cfd5629a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2ef190d9213b5d23fba846118adf351f.js": "/precache-manifest.2ef190d9213b5d23fba846118adf351f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c450c12c.chunk.css.map": "/static/css/main.c450c12c.chunk.css.map",
+    "static/js/2.cfd5629a.chunk.js.LICENSE.txt": "/static/js/2.cfd5629a.chunk.js.LICENSE.txt",
+    "static/media/add-icon.svg": "/static/media/add-icon.7decaf06.svg",
+    "static/media/home-graphic.png": "/static/media/home-graphic.b7674fa1.png",
+    "static/media/nate-profile.png": "/static/media/nate-profile.180800f1.png",
+    "static/media/send-icon.svg": "/static/media/send-icon.313f1b71.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8cca2583.js",
+    "static/js/2.cfd5629a.chunk.js",
+    "static/css/main.c450c12c.chunk.css",
+    "static/js/main.142a0595.chunk.js"
+  ]
+}
