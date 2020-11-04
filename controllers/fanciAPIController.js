@@ -1,6 +1,7 @@
 let rooms = require("../data/rooms");
 
 const privateRoomsPasswords = [];
+let browserUniqueID = [];
 
 const listOfRoomIcons = [
     "users",
@@ -34,32 +35,49 @@ module.exports.connectionEstablished = (socket) => {
             room: null,
         };
 
-        users.push(user);
+        
+        let matchedSessionID = browserUniqueID.filter(item => item.UniqueSessionID == rawUserData.UniqueSessionID);
 
-        updateUser(rawUserData);
+        if (rawUserData.UniqueSessionID && matchedSessionID.length > 0) {
+            sendStatus("Already Connected Elsewhere", "Error", "ERROR")
+            socket.disconnect();
+            
+            } else {
+                UniqueSessionID = String(Math.random());
+                UniqueSessionIDKey = String(socket.id);
+        
+                browserUniqueID.push({UniqueSessionID: UniqueSessionID, UniqueSessionIDKey: UniqueSessionIDKey})
+                socket.emit('setUniqueSessionID', UniqueSessionID)
+                users.push(user);
+                updateUser(rawUserData, true);
+            }
+            
+        
     });
 
     socket.on("reconnect", (rawUserData) => {
         sendStatus(
-            "Connected to Server",
+            "Reconnected to Server",
             `${users.length + 1} users are active`,
             "SUCCESS"
         );
     });
 
     socket.on("disconnecting", () => {
-        let userCopy = { ...getUser() };
 
+        // Leave room
+        leaveRoom();
+    
         // Remove User from users
         users = users.filter((item) => item.id !== socket.id);
 
-        if (userCopy.room) {
-            let oldroom = getRoom(userCopy.room.roomID);
-            oldroom.numberOnline = oldroom.numberOnline - 1;
-        }
-
         // Update Users for people
         updateUsers();
+
+        // Remove Session ID
+        if (browserUniqueID.length > 0) {
+            browserUniqueID = browserUniqueID.filter((item) => item.UniqueSessionIDKey != socket.id);
+        }
     });
 
     socket.on("updateUser", (rawUserData) => {
@@ -103,7 +121,7 @@ module.exports.connectionEstablished = (socket) => {
                 )[0];
                 if (roomForPassword.password === password) {
                     socket.emit('successfulJoinPrivateRoom')
-                    joinedRoom(room);
+                    joinedRoom(room, password);
                     sendStatus(
                         `Joined ${room.roomName}`,
                         "Joined Private Room",
@@ -203,7 +221,8 @@ module.exports.connectionEstablished = (socket) => {
                 );
 
                 socket.emit("updateRooms", rooms);
-                joinedRoom(checkedRoom);
+                socket.broadcast.emit("updateRooms", rooms);
+                joinedRoom(checkedRoom, password);
             } else {
                 sendStatus(
                     `Error Creating Room`,
@@ -253,7 +272,7 @@ module.exports.connectionEstablished = (socket) => {
         return room;
     }
 
-    function joinedRoom(room) {
+    function joinedRoom(room, password) {
         let user = getUser();
         socket.join(room.roomID);
 
@@ -276,6 +295,12 @@ module.exports.connectionEstablished = (socket) => {
         socket.to(room.roomID).emit("updateRooms", rooms);
 
         user.room = room;
+
+        if (password) {
+            room.password = password;
+        } else {
+            room.password = "Congrats, you found a glitch. You weren't supposed to be able copy this";
+        }
 
         socket.emit("joinedRoom", room);
         socket.emit("updateRooms", rooms);
@@ -321,7 +346,9 @@ module.exports.connectionEstablished = (socket) => {
 
     function leaveRoom() {
         let user = getUser();
-
+        if (!user) {
+            return;
+        }
         if (user.room) {
             let room = getRoom(user.room.roomID);
 
@@ -361,14 +388,7 @@ module.exports.connectionEstablished = (socket) => {
         }
     }
 
-    function __logActiveUsers() {
-        console.log(`
-*********************
-  Active Users: ${users.length}
-`);
-    }
-
-    function updateUser(rawUserData) {
+    function updateUser(rawUserData, newUser) {
         let user = getUser();
         let shouldUpdated = false;
         let wentHidden = false;
@@ -412,7 +432,13 @@ module.exports.connectionEstablished = (socket) => {
             updateUsers();
             socket.emit("updateUserState", updatedUserReturn);
         } else {
-            sendStatus("Error Saving Profile", "Invalid Entry", "ERROR");
+            if (newUser) {
+                updateUsers();
+                sendStatus("Logged in as Guest", "Go to Profile to change name", "UPDATE");
+            } else {
+
+                sendStatus("Error Saving Profile", "Invalid Entry", "ERROR");
+            }
         }
         if (wentHidden && !shouldUpdated) {
             if (!updatedUserReturn.visable) {

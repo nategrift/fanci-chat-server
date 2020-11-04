@@ -20,7 +20,7 @@ io.sockets.on('connection', fanciAPIController.connectionEstablished);
 
 app.use(bodyParser.urlencoded({extended: false}));
  
-app.use(express.static(path.join(rootDir, 'build', 'static')))
+app.use(express.static(path.join(rootDir, 'build')))
 
 app.use('/', (req,res) =>{
     res.sendFile(path.join(rootDir, 'build', 'index.html'));
