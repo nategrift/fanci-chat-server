@@ -1,0 +1,97 @@
+html {
+    background-color: #000000;
+    font-size: 62.5%;
+}
+
+*  {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#player {
+    z-index: 5;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.2s;
+}
+
+#controls {
+    position: absolute;
+    top: 50%;
+    left: 2.5rem;
+    z-index: 20;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    background-color: rgb(211, 211, 211);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transition: all 0.2s;
+    transform: translate(-50%, -50%);
+}
+
+#controls:hover {
+    border-radius: 0.7rem;
+}
+
+.show-overlay {
+    display: block !important;
+}
+
+#control-panel {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+    background-color: rgba(34, 34, 34, .9);
+    border-radius: 1rem;
+    padding: 2rem;
+    z-index: 15;
+    transition: all 0.8s;
+
+
+}
+
+
+#control-panel input {
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    color: rgb(53, 53, 53);
+    border-radius: 1px;
+    margin-right: 1rem;
+}
+
+#control-panel button {
+    background-color: rgb(53, 129, 187);
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 1px;
+}
+
+.show-control-panel {
+    transform:  translate(0, -50%) !important;
+    opacity: 1 !important;
+}

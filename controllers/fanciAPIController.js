@@ -35,7 +35,7 @@ module.exports.connectionEstablished = (socket) => {
             room: null,
         };
 
-        
+        console.log('Fanci Player Joined');
         let matchedSessionID = browserUniqueID.filter(item => item.UniqueSessionID == rawUserData.UniqueSessionID);
 
         if (rawUserData.UniqueSessionID && matchedSessionID.length > 0) {

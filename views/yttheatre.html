@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Theatre</title>
+    <link rel="stylesheet" href="css/yttheatre.css">
+</head>
+<body>
+    <div class="container">
+        <div id="controls">+</div>
+        <div id="control-panel">
+            <form id="form">
+                <input type="text" placeholder="youtube video ID">
+                <button type="submit">Play Video</button>
+            </form>
+        </div>
+        <div id="overlay"></div>
+        <div id="player"></div>
+
+    </div>
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+    <script src="js/yttheatre.js"></script>
+</body>
+</html>
