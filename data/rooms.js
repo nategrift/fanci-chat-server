@@ -31,12 +31,4 @@ module.exports = [
         roomID: "public4",
         private: false,
     },
-    // {
-    //     icon: "gamepad",
-    //     roomName: "DE BOSS ROOM",
-    //     numberOnline: 0,
-    //     hasSheild: true,
-    //     roomID: "de-boss-room",
-    //     private: true,
-    // },
 ];
