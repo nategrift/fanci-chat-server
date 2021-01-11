@@ -1,0 +1,4 @@
+.RoomCard:hover {
+        background-color: var(--color-button-hover);
+        color: var(--color-button-hover-text);
+}

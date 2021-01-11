@@ -1,0 +1,13 @@
+.Rooms {
+    height: 100vh;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    display: grid;
+    grid-template-columns: 35rem auto 35rem;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.onlineClosed {
+    grid-template-columns: 35rem auto 0rem;
+}

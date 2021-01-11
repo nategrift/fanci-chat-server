@@ -1,0 +1,83 @@
+.light {
+    --color: #1E2543;
+    --color-accent: #E58B32;
+    --color-secondary: #FFF; /* Headers, cards etc*/
+    --color-background: #F5F5F5;
+    --color-text: #222229;
+    --color-bubble: #F5F5F5;
+
+    --color-text-dull:#807F93;
+    --color-text-bright: #E0DFF0;
+
+    --color-text-button: #1E2543;
+    --color-text-button-small: #1E2543;
+    --color-background-button: #FFF;
+    --color-button-hover:  #e4e3e3;
+    --color-button-hover-text: #2a2f43;
+    --color-background-button-sub: #F5F5F5;
+    --color-background-button-sub-hover: #e4e3e3;
+
+    --background: #C9C9C9;
+
+    --color-invert-button:  #F5F5F5;
+    --color-invert-text-field: #FFFFFF;
+
+
+    --color-online: #51B548;
+    
+    --color-is-user: #FFFFFF;
+    --color-is-user-highlight: #fce8d6;
+
+    --status-error: #DD8686;
+    --status-update: #89A8C6;
+    --status-success: #8EC689;
+
+    --status-error-red: #D13333;
+
+    --menu-popup-background: #1E1E21;
+    --menu-popup-background-highlight: #2E2E31;
+    --menu-popup-text: #C9C9C9;
+}
+
+.dark {
+    --color: #1E1E21;
+    --color-accent: #E58B32;
+    --color-secondary: #424248;
+    --color-background: #333338;
+    --color-text: #D1D1D1;
+    --color-bubble: #333338;
+
+    --color-text-dull: #938F8F;
+    --color-text-bright: #D1D1D1;
+
+
+    --color-text-button: #D1D1D1;
+    --color-text-button-small: #D1D1D1;
+    --color-background-button: #424248;
+    --color-button-hover: #545459;
+    --color-button-hover-text: #c1baba;
+    --color-background-button-sub: #1E1E21;
+    --color-background-button-sub-hover: #545459;
+
+    --color-invert-button:  #1E1E21;
+    --color-invert-text-field: #535358;
+
+
+    --background: #535358;
+
+
+    --color-online: #51B548;
+
+    --color-is-user: #FFFFFF;
+    --color-is-user-highlight: #fce8d6;
+
+    --status-error: #B55F5F;
+    --status-update: #577591;
+    --status-success: #688D65;
+
+    --status-error-red: #D13333;
+
+    --menu-popup-background: #1E1E21;
+    --menu-popup-background-highlight: #2E2E31;
+    --menu-popup-text: #C9C9C9;
+}
