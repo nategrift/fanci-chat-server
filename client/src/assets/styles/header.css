@@ -2,15 +2,25 @@
     height: 5rem;
     background-color: var(--color-secondary);
     color: var(--color-text);
-    display: flex;
+    display: block;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 1px;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .header h1 {
     font-weight: 700;
     font-size: 1.8rem;
     padding-left: 4rem;
+}
+
+@media (min-width: 800px) {
+    .header {
+        display: flex;
+        position: relative;
+    }
 }

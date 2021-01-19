@@ -86,9 +86,6 @@ function Profile(props) {
                         <IconList click={updateIcon} icon={icon}/>
                     </div>
                 </section>
-                {/* <section>
-                    <h2>How users see you if profile is visable:</h2>
-                </section> */}
                 <section>   
                     {changing ? <button className={`button ${classes.buttonOpacity}`} onClick={() => {props.clicked(name, icon, visable); setChanging(false)}}>Save</button> : null}
                 </section>
