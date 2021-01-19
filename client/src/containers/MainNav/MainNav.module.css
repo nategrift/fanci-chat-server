@@ -11,10 +11,6 @@
     z-index: 1000;
 }
 
-.Nav-Mobile {
-
-}
-
 .Nav * {
     box-sizing: border-box;
     user-select: none;

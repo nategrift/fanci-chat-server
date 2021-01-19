@@ -24,7 +24,6 @@
     overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none; 
-    padding: 6rem 0;
 }
 
 .editProfile::-webkit-scrollbar {
@@ -92,9 +91,6 @@
     }
     .editProfile {
         border-right: solid 1px var(--background);
-    }
-    .editProfile {
-        padding: 0;
     }
     .Profile > div:last-of-type {
         display: grid;
