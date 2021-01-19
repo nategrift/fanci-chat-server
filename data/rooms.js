@@ -1,3 +1,4 @@
+// Default room code
 module.exports = [
     {
         icon: "users",
