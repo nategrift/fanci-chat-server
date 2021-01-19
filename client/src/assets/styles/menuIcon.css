@@ -1,0 +1,42 @@
+.menuIcon {
+    width: 6px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: var(--color-text);
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.menuIcon::before {
+    content: "";
+    position: absolute;
+    transform: translateX(9px) translate(-50%, -50%);
+    background-color: var(--color-text);
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.5s;
+}
+
+.menuIcon::after {
+    content: "";
+    position: absolute;
+    transform: translateX(-9px) translate(-50%, -50%);
+    background-color: var(--color-text);
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.5s;
+}

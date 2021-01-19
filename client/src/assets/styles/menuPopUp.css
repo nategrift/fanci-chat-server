@@ -1,0 +1,53 @@
+
+
+.menuPopUp {
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+    background-color: var(--menu-popup-background);
+    color: var(--menu-popup-text);
+    z-index: 1000;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    transform: translateX(-95%);
+}
+
+
+.menuPopUp li {
+    border-bottom: 1px solid var(--menu-popup-background-highlight); 
+}
+
+
+.menuPopUp li:last-of-type {
+    border-bottom: none;
+}
+
+.menuPopUp div {
+    display: grid;
+    grid-template-columns: 6rem auto;
+    min-width: 20rem;
+    width: 80%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    margin: 0.5rem 0.7rem;
+    border-radius: 0.4rem;
+    transition: background-color 0.1s;
+    cursor: pointer;
+}
+
+.menuPopUp svg {
+   margin-left: 1.4rem;
+   font-size: 1.8rem;
+   margin: auto auto;
+}
+
+.menuPopUp p {
+    width: auto;
+    margin: 0;
+}
+
+.menuPopUp div:hover {
+    background-color: var(--menu-popup-background-highlight);
+}

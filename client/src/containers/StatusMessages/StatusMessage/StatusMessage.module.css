@@ -1,0 +1,61 @@
+@keyframes animateInandOut {
+    0%   {transform: translateX(30rem)}
+    15%  {transform: translateX(0)}
+    90%  {transform: translateX(0)}
+    100% {transform: translateX(30rem)}
+  }
+
+.StatusMessage {
+    width: 25rem;
+    background-color: #89A8C6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    text-align: left;
+    color: var(--color-is-user);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    animation: animateInandOut 5s ease none 1 normal;
+    z-index: 1000;
+}
+
+.StatusMessage * {
+    padding: 0;
+    margin: 0;
+}
+
+.StatusMessage svg:first-child {
+    font-size: 2.4rem;
+    margin: 1rem 1.4rem;
+    margin-right: 2.2rem;
+}
+
+.StatusMessage p:last-of-type {
+    font-size: 1rem;
+    font-weight: 700;
+    padding-top: 0.5rem;
+}
+
+.ActiveMessage {
+    transform: translateX(0);
+}
+
+
+.error {
+    background-color: var(--status-error);
+    
+}
+
+.update {
+    background-color: var(--status-update);
+}
+
+.success {
+    background-color: var(--status-success);
+}
