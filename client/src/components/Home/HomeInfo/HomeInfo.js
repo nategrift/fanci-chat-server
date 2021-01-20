@@ -6,7 +6,7 @@ import "../../../assets/styles/subButton.css";
 
 import homeGraphic from "../../../assets/images/home-graphic.png";
 
-function Home(props) {
+function Home() {
     return (
         <div className={classes.HomeInfo}>
             <h3>Welcome to</h3>
