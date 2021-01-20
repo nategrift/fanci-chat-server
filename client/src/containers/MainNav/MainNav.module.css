@@ -2,11 +2,13 @@
 .Nav {
     background-color: var(--color);
     color: #807f93;
-    height: 100vh;
-    width: 7rem;
+    height: auto;
+    width: 100%;
     float: left;
-    position: relative;
+    position: fixed;
     overflow: hidden;
+    bottom: 0;
+    z-index: 1000;
 }
 
 .Nav * {
@@ -18,7 +20,7 @@
     list-style: none;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     padding: 0;
@@ -39,15 +41,16 @@
 }
 
 .selected {
-    border-left: solid 5px var(--color-accent) !important;
-    padding-right: 5px !important;
+    border-left: none !important;
+    padding-right: none !important;
     transition: border-left 0.3s;
+    border-bottom: solid 3px var(--color-accent) !important;
 }
 
 .Link {
     width: 100%;
     color: var(--color-text-dull);
-    padding: 3rem 0;
+    padding: 1.2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,8 +69,32 @@
     transition: transform 1s cubic-bezier(.64,0,.31,.99);
     transform: rotate(0deg);
     overflow: hidden;
+    display: none;
 }
 
 .themeToggleAnimation {
     transform: rotate(720deg);
 }
+
+@media (min-width: 800px) {
+    
+    .Nav ul {
+        flex-direction: column;
+    }
+    .Nav {
+        height: 100vh;
+        width: 7rem;
+        position: relative;
+    }
+    .themeToggle {
+        display: block;
+    }
+    .selected {
+        border-left: solid 5px var(--color-accent) !important;
+        padding-right: 5px !important;
+        border-bottom: none !important;
+    }
+    .Link {
+        padding: 3rem 0;
+    }
+  } 

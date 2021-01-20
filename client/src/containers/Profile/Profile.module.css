@@ -8,7 +8,11 @@
     background-color: var(--background);
     color: var(--color-text);
     display: grid;
-    grid-template-columns: auto 35rem;
+    grid-template-columns: auto 0;
+}
+
+.Profile > div:last-of-type {
+    display: none;
 }
 
 .editProfile {
@@ -16,7 +20,7 @@
     height: 100vh;
     background-color: var(--color-background);
     color: var(--color-text);
-    border-right: solid 1px var(--background);
+    border-right: none;
     overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none; 
@@ -33,6 +37,10 @@
     align-items: flex-start;
     padding: 0.8rem 4rem;
     text-align: left;
+}
+
+.editProfile section:last-of-type {
+    padding-bottom: 10rem;
 }
 
 .editProfile section h2 {
@@ -75,4 +83,16 @@
 
 .buttonOpacity {
     animation: opacity 0.5s ease none 1 normal;
+}
+
+@media (min-width: 800px) {
+    .Profile {
+        grid-template-columns: auto 35rem;
+    }
+    .editProfile {
+        border-right: solid 1px var(--background);
+    }
+    .Profile > div:last-of-type {
+        display: grid;
+    }
 }

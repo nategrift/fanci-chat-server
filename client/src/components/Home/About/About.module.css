@@ -1,25 +1,25 @@
 .About {
     color: var(--color-text);
-    display: flex;
+    display: block;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background-color: var(--background);
-    
+    overflow: auto;
 }
 
 .section {
-    width: 50%;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     background-color: var(--color-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    overflow: auto;
 }
 
 .section:first-child {
@@ -65,7 +65,7 @@
 }
 
 .info {
-    width: 50%;
+    width: 70%;
 }
 
 .info  * {
@@ -93,7 +93,28 @@
 
 .About > a:last-child {
     position: absolute;
-    bottom: 2rem;
+    bottom: 6rem;
     right: 2rem;
     background-color: var(--color-invert-button);
+}
+
+
+@media (min-width: 1200px) {
+    .About {
+        display: flex;
+    }
+    .section {
+        height: 100vh;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+    .section:last-of-type p {
+        width: 50%;
+    }
+    .About > a:last-child {
+        bottom: 2rem;
+    }
+    .info {
+        width: 50%;
+    }
 }
