@@ -5,7 +5,8 @@
 
 
 .CreateRoom {
-    width: 90%;
+    width: 60%;
+    min-width: 50rem;
     max-width: 100rem;
     display: flex;
     flex-direction: row;
@@ -18,15 +19,16 @@
     background-color: var(--color-background);
     animation: animateIn 0.7s ease none 1 normal;
     min-height: 55vh;
-    z-index: 1200;
+    z-index: 600;
     border-radius: 0.6rem;
     box-sizing: border-box;
+    min-width: 75rem;
     
 }
 
 
 .CreateRoomInfo {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -41,10 +43,12 @@
 
 .CreateRoomInput {
     width: 100%;
+    padding: 2rem 3rem;
     position: relative;
-    height: 80vh;
-    padding: 8rem 1rem;
+    height: 100%;
     margin-top: 1rem;
+    min-height: 40rem;
+    min-width: 50rem;
     max-width: 100rem;
     flex: 1.75;
 }
@@ -163,21 +167,4 @@
 .ClosePopup:hover {
     background-color: var(--color-button-hover);
     color: var(--color-button-hover-text);
-}
-
-
-@media (min-width: 800px) {
-    .CreateRoomInfo {
-        display: flex; 
-    }
-    .CreateRoom {
-        width: 60%;
-        min-width: 75rem;
-        max-width: 100rem;
-    }
-    .CreateRoomInput {
-        padding: 2rem 3rem;
-        min-width: 50rem;
-        max-height: 50rem;
-    }
 }

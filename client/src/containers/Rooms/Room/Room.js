@@ -122,9 +122,7 @@ function Room(props) {
         room = (
             <React.Fragment>
                 <div className={classes.RoomHeader}>
-                    <FontAwesomeIcon icon={'bars'} onClick={() => props.setSection(props.SECTIONS.RoomNav)}/>
                     <FontAwesomeIcon icon={props.room.icon} />
-                    
                     <h1>{props.room.roomName}</h1>
                     <div
                         onClick={menuClickHandler}
@@ -132,7 +130,9 @@ function Room(props) {
                     >
                         <button className="menuIcon"></button>
                     </div>
-                    <FontAwesomeIcon icon={'users'} onClick={() => props.setSection(props.SECTIONS.OnlineList)}/>
+                    <div onClick={props.toggleSideBar} className={`${props.sideDrawOpen ? classes.spinIcon : null} ${classes.toggleIcon}`}>
+                        <FontAwesomeIcon icon="chevron-left" />
+                    </div>
                 </div>
                 <ul className={classes.RoomList}>
                     {msgList}

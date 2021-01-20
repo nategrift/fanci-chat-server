@@ -46,7 +46,7 @@ import {
     faDoorClosed,
     faSearch,
     faCopy,
-    faBars
+    faChevronLeft
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -94,7 +94,7 @@ library.add(
     faDoorClosed,
     faSearch,
     faCopy,
-    faBars
+    faChevronLeft
 );
 
 const store = createStore(reducer)

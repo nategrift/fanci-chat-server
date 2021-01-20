@@ -12,9 +12,9 @@
     background-color: var(--color-background);
     animation: animateIn 0.7s ease none 1 normal;
     width: 30%;
-    min-width: 34rem;
+    min-width: 30rem;
     max-width: 45rem;
-    height: 40vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -58,11 +58,3 @@
 .JoiningRoom div:last-of-type * {
     margin: 2rem 3rem;
 }
-
-
-@media (min-width: 1200px) {
-    .JoiningRoom {
-        height: 30vh;
-    }
-}
-

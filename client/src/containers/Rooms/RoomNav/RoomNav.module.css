@@ -55,7 +55,7 @@
 
 .ReloadIcon {
     position: absolute;
-    bottom: 6rem;
+    bottom: 4rem;
     right: 1.75rem;
     font-size: 1.2rem;
     color: var(--color-text-dull);
@@ -183,10 +183,3 @@
 .searchBarTyping {
     opacity: 1 !important;
 }
-
-@media (min-width: 1200px) {
-    .ReloadIcon {
-        bottom: 4rem;
-    }
-}
-

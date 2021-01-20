@@ -2,13 +2,12 @@
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-rows: 7rem auto 5.5rem 5rem;
+    grid-template-rows: 7rem auto 5.5rem;
     border-right: solid 1px var(--background);
     text-align: left;
     scroll-behavior: smooth;
 
 }
-
 
 .centerInstructions {
     font-size: 2.2rem;
@@ -140,7 +139,6 @@
     transition: transform 0.2s;
     height: auto;
     color: var(--color-text);
-    margin-left: 0.5rem;
 }
 
 .form input[type=text]:focus {
@@ -212,21 +210,4 @@
 }
 .spinIcon {
     transform: rotateY(180deg);
-}
-
-@media (min-width: 800px) {
-    
-    .Room {
-        width: 100%;
-        height: 100vh;
-        display: grid;
-        grid-template-rows: 7rem auto 5.5rem;
-        border-right: solid 1px var(--background);
-        text-align: left;
-        scroll-behavior: smooth;
-    }
-  } 
-
-  .form:focus {
-    background-color: pink;
 }
