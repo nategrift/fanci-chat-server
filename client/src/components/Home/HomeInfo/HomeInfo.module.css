@@ -7,12 +7,12 @@
     justify-content: space-around;
     height: 100vh;
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 12rem;
 }
 
 
 .HomeInfo h1 {
-    font-size: 6rem;
+    font-size: 4.6rem;
     font-weight: 700;
     margin: 0;
     text-align: center;
@@ -56,8 +56,18 @@
 
 
 .HomeInfo a:last-of-type {
-    position: absolute;
-    bottom: 2rem;
+    position: fixed;
+    bottom: 6.8rem;
     right: 2rem;
     background-color: var(--color-invert-button);
+}
+
+@media (min-width: 800px) {
+    .HomeInfo a:last-of-type {
+        bottom: 2rem;
+    }
+    .HomeInfo h1 {
+        font-size: 6rem;
+    }
+    
 }

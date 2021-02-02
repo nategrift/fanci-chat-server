@@ -46,7 +46,7 @@ import {
     faDoorClosed,
     faSearch,
     faCopy,
-    faChevronLeft
+    faBars
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -94,7 +94,7 @@ library.add(
     faDoorClosed,
     faSearch,
     faCopy,
-    faChevronLeft
+    faBars
 );
 
 const store = createStore(reducer)
@@ -108,7 +108,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

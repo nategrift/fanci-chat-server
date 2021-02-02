@@ -1,12 +1,12 @@
 .StatusMessages {
-    position: absolute;
+    position: fixed;
     top: 2rem;
     right: 0;
-    padding: none;
-    margin: none;
-    padding-right: 2rem;
+    padding: 0;
+    margin: 0;
+    /* padding-right: 2rem; */
     z-index: 1000;
-    height: 80vh;
+    /* height: 80vh; */
     overflow: hidden;
 }
 

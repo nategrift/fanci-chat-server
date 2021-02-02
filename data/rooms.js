@@ -1,3 +1,4 @@
+// Default room code
 module.exports = [
     {
         icon: "users",
@@ -30,5 +31,5 @@ module.exports = [
         hasSheild: true,
         roomID: "public4",
         private: false,
-    },
+    }
 ];

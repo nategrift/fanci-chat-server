@@ -38,7 +38,7 @@
 .roomsList {
     overflow-y: auto;
     scrollbar-color: var(--color-secondary) transparent;
-    
+    padding-bottom: 12rem;
 }
 
 
@@ -47,6 +47,7 @@
     padding: 0;
     height: auto;
     list-style: none;
+    overflow: auto;
 }
 
 .roomsListElement > * {
@@ -55,7 +56,7 @@
 
 .ReloadIcon {
     position: absolute;
-    bottom: 4rem;
+    bottom: 6rem;
     right: 1.75rem;
     font-size: 1.2rem;
     color: var(--color-text-dull);
@@ -183,3 +184,10 @@
 .searchBarTyping {
     opacity: 1 !important;
 }
+
+@media (min-width: 1200px) {
+    .ReloadIcon {
+        bottom: 4rem;
+    }
+}
+
