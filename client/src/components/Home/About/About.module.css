@@ -92,7 +92,7 @@
 }
 
 .About > a:last-child {
-    position: absolute;
+    position: fixed;
     bottom: 6rem;
     right: 2rem;
     background-color: var(--color-invert-button);

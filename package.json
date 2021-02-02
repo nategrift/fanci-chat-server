@@ -1,7 +1,7 @@
 {
-  "name": "browserhomepage",
+  "name": "fancichat",
   "version": "0.1.0",
-  "description": "Browser Homepage Application",
+  "description": "Fanci Chat Application",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

@@ -36,6 +36,7 @@
 .sectionNavShown {
     transform: translateX(-5%);
     box-shadow: 1rem 0rem 1rem rgba(0, 0, 0, 0.1);
+    
 }
 
 .sectionRoom {
@@ -52,9 +53,24 @@
     border-right: none;
 }
 
+@media (min-width: 800px) {
+    .sectionNavShown {
+       padding-left: 10rem;
+    }
+    .noRoomSection {
+        padding-left: 5rem;
+    }
+}
+
 @media (min-width: 1200px) {
     .Rooms {
         display: grid;
         grid-template-columns: 35rem auto 35rem;
+    }
+    .sectionNavShown {
+        padding-left: 0rem;
+    }
+    .noRoomSection {
+        padding-left: 0rem;
     }
 }

@@ -31,5 +31,5 @@ module.exports = [
         hasSheild: true,
         roomID: "public4",
         private: false,
-    },
+    }
 ];
