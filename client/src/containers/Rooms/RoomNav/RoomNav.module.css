@@ -38,7 +38,7 @@
 .roomsList {
     overflow-y: auto;
     scrollbar-color: var(--color-secondary) transparent;
-    
+    padding-bottom: 12rem;
 }
 
 
@@ -47,6 +47,7 @@
     padding: 0;
     height: auto;
     list-style: none;
+    overflow: auto;
 }
 
 .roomsListElement > * {
