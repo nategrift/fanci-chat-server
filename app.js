@@ -19,11 +19,11 @@ io.on('connection', fanciAPIController.connectionEstablished);
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use(express.static(path.join(rootDir, 'build')))
+app.use(express.static(path.join(rootDir, 'client' ,'build')))
 
 // All paths go to index.html
 app.use('/', (req,res) =>{
-    res.sendFile(path.join(rootDir, 'build', 'index.html'));
+    res.sendFile(path.join(rootDir, 'client' , 'build', 'index.html'));
 });
 
 server.listen(process.env.PORT || 5000);
