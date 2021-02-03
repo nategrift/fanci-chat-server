@@ -20,7 +20,6 @@ To edit client side code
 
 
 ### Reason for Application
-This project was designed for **Interactive Media Design - Level 4** at **Fanshawe College**
 
 I created Fanci Chat to test my skills with web development.  The entire website was designed, coded, and created by me.  I created this website as a messaging application that wouldn’t save any messages to any databases.  Everything you send is passed through server but we don’t collect any information about your messages.  We only keep track of accounts for displaying users.  Thank you so much for checking out this chat program. 
 
