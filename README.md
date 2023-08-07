@@ -4,7 +4,7 @@
 
 ### To use
 
-[Fanci Chat](https://www.fanci.ca)
+[Fanci Chat](https://fanci.nategrift.com)
 
 To run locally follow these steps:
 - clone the repository
